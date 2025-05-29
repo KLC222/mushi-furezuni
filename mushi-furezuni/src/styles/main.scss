@@ -1,0 +1,247 @@
+$primary: #31A87C;
+$secondary: #3BCA96;
+$navbar-light-color: #fff;
+
+
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+// Common
+
+//Nav
+.navbar {
+    color: white;
+    background-color: #34A37A;
+    
+}
+.navbar-brand{
+    width: 15%;
+}
+.navbar-effects .nav-link:hover {
+  position: relative;
+  color: #ffdf6c;
+}
+
+.navbar-effects .nav-link.active {
+  color: #ffdf6c; /* Active link color */
+}
+.navbar-effects .nav-link::after {
+  content: "";
+  position: absolute;
+  background-color: #ffdf6c;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 3%;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.navbar-effects .nav-link:hover::after {
+  width: 80%;
+  left: 0;
+}
+
+//Footer
+
+.footer a{
+    color: rgb(214, 244, 227);
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #ffdf6c;
+}
+
+.footer {
+    padding-top: 2rem;
+}
+
+body #root {
+    height: 100%;
+}
+
+.btn-custom-primary {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: orange;
+    --bs-btn-border-color: orange;
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #FF8C00;
+    --bs-btn-hover-border-color: orange;
+    --bs-btn-focus-shadow-rgb: orange;
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: orange;
+    --bs-btn-active-border-color: orange;
+  }
+  .btn-custom-tertinary {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: white;
+    --bs-btn-bg: background-color: #3BCA96;
+    --bs-btn-border-color:white;
+    --bs-btn-hover-color: #31A87C;
+    --bs-btn-hover-bg: #c8ebdf;
+    --bs-btn-hover-border-color: #31a87cdc;
+    --bs-btn-focus-shadow-rgb: white;
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: orange;
+    --bs-btn-active-border-color: orange;
+  }
+
+  .navbar-effects, footer {
+    background-color: #31a87cdc;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .navbar-effects:hover, footer:hover {
+    background-color: #31A87C; /* Slightly darker or different shade */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-text {
+    font-size: larger;
+  }
+  //Home
+  .padding-top {
+    padding-top: 2em;
+  }
+  .expandable-col{
+    
+    border-radius: 3em;
+    position: relative;
+    z-index: 1;
+    
+    
+  }
+  .expandable-col .expandable-details{
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: -5%;
+    right: -5%;
+    background-color: rgba(225, 228, 210, 0.629);
+    border-radius: 1em;
+    padding-top: 10px;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+    color: black;
+  }
+  .expandable-col:hover {
+    
+    .expandable-details{
+        opacity: 1;
+    }
+  }
+  .animated-col {
+    background: linear-gradient(180deg, #34A37A 0, #FFF 130%);
+    padding-top: 1em;
+    border-radius: 3em;
+    padding-bottom: 1em;
+    color: white;
+    margin-bottom: 3rem;
+  }
+  .expandable-col:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+ 
+  .banner {
+    background-color: #34A37A;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+   
+  }
+  .banner h4{
+    font-weight: 200; 
+}
+
+//Product page
+.product_description {
+    background-color: #f8f9fa;
+    padding: 2rem;
+  }
+  .product_benefits {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), #cae4db6e);
+    padding: 2rem;
+    border-radius: 1rem;
+    overflow: hidden; /* Ensure the shine effect doesn't overflow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    color: black;
+  }
+
+.product_benefits::after {
+    
+    content: '';
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    // transform: rotate(45deg);
+    animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+    from {
+        transform: translate(-150%, -150%) rotate(45deg);
+    }
+    to {
+        transform: translate(150%, 150%) rotate(45deg);
+    }
+}
+
+.carousel {
+    width:100%;
+    height:100%;
+    margin: auto;
+  }
+.thumbnails{
+    max-width: 70%;
+    border-radius: 4px; /* Rounded corners */
+  
+}
+
+//Contact Page
+.custom-submit {
+    background-color: #54bb95;
+    border-color: #31A87C;
+    border-width: 2px;
+    color: white;
+}
+
+//Cart page
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.center-product {
+  min-height: 100vh;
+}
+#image-section{
+  width: 100%;
+  height: auto;
+};
+
+.imgBox{
+  max-width: 400px;
+  min-width: 200px;
+};
+
+.button-center {
+  display: flex;
+  justify-self: center;
+}
+
+.email-input {
+  background-color: #fefff5;
+  border-radius: 0.4em;
+  border-color: #c8ebdf;
+  border-width: 1px;
+  padding-left: 2em;
+}
