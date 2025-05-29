@@ -79,6 +79,7 @@ const CheckoutForm = () => {
 
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
+    console.log("submit")
     e.preventDefault();
 
     setIsLoading(true);
@@ -92,6 +93,7 @@ const CheckoutForm = () => {
     }
 
     const confirmResult = await checkout.confirm();
+    console.log("confirm result", confirmResult)
 
     // This point will only be reached if there is an immediate error when
     // confirming the payment. Otherwise, your customer will be redirected to
@@ -122,7 +124,7 @@ const CheckoutForm = () => {
       <PaymentElement id="payment-element" />
       {/* Show any error or success messages */}
       {message && <div id="payment-message">{message}</div>}
-      <Button disabled={isLoading} id="submit" className="btn-custom-primary mt-4 mb-5 button-center">
+      <Button disabled={isLoading} type="submit" id="submit" className="btn-custom-primary mt-4 mb-5 button-center">
         {isLoading ? (
           <div className="spinner"></div>
         ) : (
