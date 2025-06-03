@@ -12,7 +12,7 @@ export default function Footer(){
                  </Col>
                 <Col>
                     <p><Link to="/about">アステナルについて</Link></p>
-                    <p><Link to="/product">製品について</Link></p>
+                    <p><Link to="/products">製品について</Link></p>
                     <p><Link to="/qa">よくある質問</Link></p>
                     <p><Link to="/contact">お問い合わせ</Link></p>
                 </Col>

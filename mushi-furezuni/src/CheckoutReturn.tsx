@@ -11,6 +11,7 @@ import {
 } from "react-router";
 import { supabase } from "./supabase";
 import { useSuspenseQuery } from "@tanstack/react-query";
+import CheckoutSuccess from "./CheckoutSuccess";
 
 
 
@@ -57,11 +58,9 @@ const CheckoutReturn = () => {
     if (data.status === 'complete') {
       return (
         <section id="success">
-          <p>
-            We appreciate your business! A confirmation email will be sent to {data.customer_email}.
-  
-            If you have any questions, please email <a href="mailto:orders@example.com">orders@example.com</a>.
-          </p>
+        
+            <CheckoutSuccess email={data.customer_email}/>
+           
         </section>
       )
     }
