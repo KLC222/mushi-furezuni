@@ -9,12 +9,11 @@ import { useState, useRef, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact(){
-
   const recaptcha = useRef(null);
+  const [token, setToken] = useState<string | null>(null);
   useEffect(()=>{
-    console.log(recaptcha.current.state)
-  },[recaptcha])
-  
+    console.log("token value",token)
+  },[token])
   
   type FormData = {
     name: string,
@@ -43,19 +42,21 @@ export default function Contact(){
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
     e.preventDefault();
     console.log(e, formData)
-    
-    //currentTarget for the whole form 
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
-    .then((result) => {
-      console.log(result.text);
-      alert("Message Sent Successfully")
-    },(error)=>{
-      console.log(error.text);
-      alert('Something went wrong!')
-    });
-    e.currentTarget.reset()
-  };
-  
+    if(token){
+      //currentTarget for the whole form 
+      emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
+      .then((result) => {
+        console.log(result.text);
+        alert("Message Sent Successfully")
+      },(error)=>{
+        console.log(error.text);
+        alert('Something went wrong!')
+      });
+      e.currentTarget.reset()
+      }else{
+        alert("reCAPTCHA認証が済んでいません。")
+      }
+    }
     return <>
     <NavTop />
     <Container>
@@ -94,7 +95,9 @@ export default function Contact(){
         <Form.Label>お問い合わせ内容</Form.Label>
         <Form.Control as="textarea" name="message" onChange={handleChange} required placeholder="お問い合わせ内容を入力してください" rows={3} />
       </Form.Group>
-      <ReCAPTCHA sitekey={import.meta.env.VITE_SITE_KEY} ref={recaptcha}/>
+      <ReCAPTCHA onChange={token => {
+        setToken(token);
+      }} sitekey={import.meta.env.VITE_SITE_KEY}  ref={recaptcha}/>
       <div className=" d-flex justify-content-center">
       <Button className="custom-submit my-5" type="submit">
         送信
