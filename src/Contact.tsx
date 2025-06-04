@@ -5,14 +5,16 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Footer from "./Footer";
 import Button from 'react-bootstrap/Button';
 import emailjs from 'emailjs-com';
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact(){
 
   const recaptcha = useRef(null);
-
- 
+  useEffect(()=>{
+    console.log(recaptcha.current.state)
+  },[recaptcha])
+  
   
   type FormData = {
     name: string,
