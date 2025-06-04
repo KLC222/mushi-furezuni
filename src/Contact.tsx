@@ -5,10 +5,14 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Footer from "./Footer";
 import Button from 'react-bootstrap/Button';
 import emailjs from 'emailjs-com';
-import { useState } from "react";
-
+import { useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact(){
+
+  const recaptcha = useRef(null);
+
+ 
   
   type FormData = {
     name: string,
@@ -37,6 +41,7 @@ export default function Contact(){
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
     e.preventDefault();
     console.log(e, formData)
+    
     //currentTarget for the whole form 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
     .then((result) => {
@@ -87,11 +92,14 @@ export default function Contact(){
         <Form.Label>お問い合わせ内容</Form.Label>
         <Form.Control as="textarea" name="message" onChange={handleChange} required placeholder="お問い合わせ内容を入力してください" rows={3} />
       </Form.Group>
+      <ReCAPTCHA sitekey={import.meta.env.VITE_SITE_KEY} ref={recaptcha}/>
       <div className=" d-flex justify-content-center">
       <Button className="custom-submit my-5" type="submit">
         送信
       </Button>
+      
       </div>
+      
     </Form>
     </Container>
     <Footer />

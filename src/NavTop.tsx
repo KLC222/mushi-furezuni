@@ -2,10 +2,14 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '/assets/images/logo_tran.png'
-import {NavLink} from 'react-router';
+import {NavLink, Link} from 'react-router';
 import { ImCart } from "react-icons/im";
+import { useEffect, useState } from 'react';
 
 export default function NavTop() {
+ 
+  
+
   return (
     <Navbar expand="lg" sticky="top" className="navbar navbar-effects nav-text" data-bs-theme="dark">
       <Container>
@@ -18,11 +22,13 @@ export default function NavTop() {
             <Nav.Link as={NavLink} to="/about" end className="d-flex flex-grow-1 nav-ani">アステナルについて</Nav.Link>
             <Nav.Link as={NavLink} to="/qa" end className="d-flex flex-grow-1 nav-ani">よくある質問</Nav.Link>
             <Nav.Link as={NavLink} to="/contact" end className="d-flex flex-grow-1 nav-ani">お問い合わせ</Nav.Link>
-            <Nav.Link as={NavLink} to="/cart" className="d-flex flex-grow-1 nav-ani"><ImCart/></Nav.Link>
             
+            <Link to="/cart" className="d-done d-md-inline nav-cart"><ImCart/></Link>
           </Nav>
         </Navbar.Collapse>
+        
       </Container>
+      
     </Navbar>
   );
 }
