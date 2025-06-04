@@ -8,7 +8,10 @@ import emailjs from 'emailjs-com';
 import { useState, useRef, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
+const RECAPTCHA_KEY = import.meta.env.VITE_SITE_KEY
+
 export default function Contact(){
+  console.log('recaptcha key', RECAPTCHA_KEY)
   const recaptcha = useRef(null);
   const [token, setToken] = useState<string | null>(null);
   useEffect(()=>{
@@ -44,7 +47,7 @@ export default function Contact(){
     console.log(e, formData)
     if(token){
       //currentTarget for the whole form 
-      emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
+      emailjs.send(SERVICE_ID, TEMPLATE_ID, {...formData, 'g-recaptcha-response': token}, PUBLIC_KEY)
       .then((result) => {
         console.log(result.text);
         alert("Message Sent Successfully")
@@ -97,7 +100,7 @@ export default function Contact(){
       </Form.Group>
       <ReCAPTCHA onChange={token => {
         setToken(token);
-      }} sitekey={import.meta.env.VITE_SITE_KEY}  ref={recaptcha}/>
+      }} sitekey={RECAPTCHA_KEY}  ref={recaptcha}/>
       <div className=" d-flex justify-content-center">
       <Button className="custom-submit my-5" type="submit">
         送信

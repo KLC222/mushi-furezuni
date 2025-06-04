@@ -22,8 +22,8 @@ export default function NavTop() {
             <Nav.Link as={NavLink} to="/about" end className="d-flex flex-grow-1 nav-ani">アステナルについて</Nav.Link>
             <Nav.Link as={NavLink} to="/qa" end className="d-flex flex-grow-1 nav-ani">よくある質問</Nav.Link>
             <Nav.Link as={NavLink} to="/contact" end className="d-flex flex-grow-1 nav-ani">お問い合わせ</Nav.Link>
-            
-            <Link to="/cart" className="d-done d-md-inline nav-cart"><ImCart/></Link>
+            <Nav.Link as={NavLink} to="/blog" end className="d-flex flex-grow-1 nav-ani">ブログ</Nav.Link>
+            <Link to="/cart" className="d-done d-md-inline nav-cart pt-1 cart-icon" ><ImCart/></Link>
           </Nav>
         </Navbar.Collapse>
         

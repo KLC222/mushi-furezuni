@@ -14,6 +14,7 @@ import Checkout from './Checkout.tsx';
 import Cart from './Cart.tsx';
 import { CartProvider } from './CartContext.tsx';
 import CheckoutReturn from './CheckoutReturn.tsx';
+import Blog from './Blog.tsx';
 
 
 export default function App(){
@@ -38,6 +39,9 @@ export default function App(){
                 <Route path='/cart' element={<Cart/>}/>
                 <Route path='/checkout' element={<Checkout/>}/>
                 <Route path="/return" element={<CheckoutReturn />} />
+                <Route path='/blog' element={<Blog/>}>
+                
+                </Route>
             </Routes>
         </BrowserRouter>
         </CartProvider>

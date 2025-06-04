@@ -35,6 +35,7 @@ export default function Products(){
     }
 })
 
+
 const selectedProductData = selectedProduct != null && data.find(product => product.product_id === selectedProduct) || data[0]
 
 
