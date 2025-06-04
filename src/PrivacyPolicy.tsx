@@ -90,7 +90,7 @@ export default function PrivacyPolicy(){
     <p className="py-1 fw-bold">第7条（事業者情報）
     </p>
     <p>法人名：アステナル</p>
-    <p>住所：〒274-0815 千葉県船橋市西習志野4-15-16</p>
+    {/* <p>住所：〒274-0815 千葉県船橋市西習志野4-15-16</p> */}
     <p>代表者：郡司賢一</p>
     <p className="py-1 fw-bold">第8条（個人情報の利用停止等）
     </p>
