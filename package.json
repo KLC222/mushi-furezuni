@@ -6,7 +6,7 @@
   "scripts": {
     "supabase": "supabase",
     "dev": "vite --mode development",
-    "build:prod": "vite build --mode production",
+    "build": "vite build --mode production",
     "lint": "eslint .",
     "preview": "vite preview"
   },
