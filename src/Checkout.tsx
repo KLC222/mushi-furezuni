@@ -12,7 +12,8 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 import { supabase } from "./supabase";
 import { Container, Button } from "react-bootstrap";
 
-const stripePromise = loadStripe("pk_test_51ROxQvGEhvV3qzNtHZ0uUN3VDz4HggPJoSAHZmn3z0Qzx0Y6UpB980MALyOF47E7zQu5QTs99S1Fb2VMGGjaKcy800PUIabMSA");
+const stripe_public_key = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
+const stripePromise = loadStripe(stripe_public_key);
 
 const validateEmail = async (email: string, checkout: CheckoutContextValue) => {
   const updateResult = await checkout.updateEmail(email);

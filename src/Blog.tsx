@@ -9,13 +9,13 @@ export default function Blog(){
         queryFn: async ()=> {
           const response = await supabase
             .from('blog')
-            .select(`*`)
+            .select('*')
           if (response.error) {
             throw response.error
           }
           return response.data
         }
     })
-    console.log(data)
+    console.log('blog data',data)
     return <h1>blog page</h1>
 }

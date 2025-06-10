@@ -7,7 +7,7 @@ import { ImCart } from "react-icons/im";
 import { useEffect, useState } from 'react';
 
 export default function NavTop() {
- 
+
   
 
   return (

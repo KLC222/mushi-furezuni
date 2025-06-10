@@ -1,6 +1,6 @@
 import NavTop from "./NavTop";
 import Form from 'react-bootstrap/Form';
-import { Link } from "react-router";
+import { Link, Navigate } from "react-router";
 import { Container, Row, Col } from 'react-bootstrap';
 import Footer from "./Footer";
 import Button from 'react-bootstrap/Button';
@@ -11,12 +11,13 @@ import ReCAPTCHA from "react-google-recaptcha";
 const RECAPTCHA_KEY = import.meta.env.VITE_SITE_KEY
 
 export default function Contact(){
+  
+
   console.log('recaptcha key', RECAPTCHA_KEY)
   const recaptcha = useRef(null);
   const [token, setToken] = useState<string | null>(null);
-  useEffect(()=>{
-    console.log("token value",token)
-  },[token])
+  
+ 
   
   type FormData = {
     name: string,
@@ -35,7 +36,7 @@ export default function Contact(){
 
   const [formData, updateFormData] = useState<FormData>(initialFormData);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     updateFormData({
       ...formData,
       [e.currentTarget.name]: e.currentTarget.value.trim()
@@ -50,10 +51,10 @@ export default function Contact(){
       emailjs.send(SERVICE_ID, TEMPLATE_ID, {...formData, 'g-recaptcha-response': token}, PUBLIC_KEY)
       .then((result) => {
         console.log(result.text);
-        alert("Message Sent Successfully")
+        alert("お問い合わせありがとうございます。内容を確認後、 3日以内に返信できるよう努めて参ります。")
       },(error)=>{
         console.log(error.text);
-        alert('Something went wrong!')
+        alert('メッセージの送信に失敗しました。')
       });
       e.currentTarget.reset()
       }else{
@@ -105,7 +106,7 @@ export default function Contact(){
       <Button className="custom-submit my-5" type="submit">
         送信
       </Button>
-      
+     
       </div>
       
     </Form>

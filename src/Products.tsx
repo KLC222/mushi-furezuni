@@ -9,7 +9,6 @@ import { supabase } from "./supabase";
 import ProductsCarousel from './ProductsCarousel';
 import { ReactEventHandler, useState } from "react";
 import {Button} from "react-bootstrap";
-import Thumbnails from "./Thumbnail";
 import { type ProductData, useCartContext } from './CartContext'
 
 
