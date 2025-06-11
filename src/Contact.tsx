@@ -8,7 +8,7 @@ import emailjs from 'emailjs-com';
 import { useState, useRef, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const RECAPTCHA_KEY = import.meta.env.VITE_SITE_KEY
+const RECAPTCHA_KEY = import.meta.env.VITE_RECAPCHA_SITE_KEY
 
 export default function Contact(){
   

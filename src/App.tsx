@@ -16,6 +16,7 @@ import { CartProvider } from './CartContext.tsx';
 import CheckoutReturn from './CheckoutReturn.tsx';
 import Blog from './Blog.tsx';
 import ContactSuccess from './ContactSuccess.tsx';
+import Construction from './Construction.tsx';
 
 
 export default function App(){
@@ -25,7 +26,8 @@ export default function App(){
         <CartProvider>
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Home />} />
+                <Route path='/' element={<Construction />} />
+                <Route path='/home' element={<Home/>}/>
                 <Route path='/products' element={<Products />}>
                     <Route path='' element={<ProductDetails />}/>
                     <Route path="dimensions" element={<ProductDimensions/>}/>
