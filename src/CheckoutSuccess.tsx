@@ -19,7 +19,7 @@ export default function CheckoutSuccess(props: Props){
                     <Col className="pt-5">
                         <p>ご注文を承りました。お客様のメール宛に購入完了のメールを送信させていただきました。</p>
                         <p>商品の到着まで、今しばらくお待ちください。</p>
-                        <p>ご質問がありましたら<a href="mailto:orders@example.com">orders@example.com</a>までお気軽にお問い合わせください。</p>
+                        <p>ご質問がありましたら <a href="mailto:info@furezuni.com">info@furezuni.com</a> までお気軽にお問い合わせください。</p>
                     </Col>
                 </Row>
               

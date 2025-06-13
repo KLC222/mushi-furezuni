@@ -1,5 +1,6 @@
 import { supabase } from "./supabase"
 import { useSuspenseQuery } from "@tanstack/react-query"
+import Layout from "./Layout"
 
 export default function Blog(){
     
@@ -17,5 +18,9 @@ export default function Blog(){
         }
     })
     console.log('blog data',data)
-    return <h1>blog page</h1>
+    return <>
+        <Layout>
+            <h1>ブログページは準備中です。</h1>
+        </Layout>
+    </>
 }

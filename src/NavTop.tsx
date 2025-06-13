@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '/assets/images/logo_tran.png'
+import logo from '/assets/images/company_logo.png'
 import {NavLink, Link} from 'react-router';
 import { ImCart } from "react-icons/im";
 import { useEffect, useState } from 'react';
@@ -13,7 +13,7 @@ export default function NavTop() {
   return (
     <Navbar expand="lg" sticky="top" className="navbar navbar-effects nav-text" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand as={NavLink} to="/"><img src={logo} alt="logo" height={70}/></Navbar.Brand>
+        <Navbar.Brand as={NavLink} to="/"><img src={logo} alt="logo" height={80}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto d-flex flex-grow-1">
