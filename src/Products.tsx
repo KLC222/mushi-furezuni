@@ -62,6 +62,7 @@ function setCart(product: ProductData){
 
     <NavTop />
     <Container>
+    <h1>*ページ制作中にて購入いただけません。</h1>
         <Row>
             <h2 className="py-5 d-flex justify-content-center">虫フレズニー</h2>
         </Row>

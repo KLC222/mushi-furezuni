@@ -27,7 +27,7 @@ export default function Cart(){
     return <>
         <NavTop/>
         <Container className="center-product">
-            
+        <h1>*ページ制作中にて購入いただけません。</h1>
             {cart && <>
             <h2 className="pt-5" style={{ textAlign: 'center' }}>ご注文内容</h2><Table className='my-5' bordered>
                 <thead>
