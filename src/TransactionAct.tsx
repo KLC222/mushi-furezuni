@@ -13,9 +13,11 @@ export default function Qa(){
     </p>
     <p>郡司賢一</p>
     <p className="py-1 fw-bold">住所</p>
-    <p>〒274-0815 千葉県船橋市西習志野4-15-16</p>
+    <p>〒274-0815 千葉県船橋市（丁目・番地以降の住所は、ご請求いただいた場合に遅滞なく開示いたします。）</p>
+    <p className="py-1 fw-bold">メール</p>
+    <p>info@furezuni.com</p>
     <p className="py-1 fw-bold">電話番号</p>
-    <p>0474698523</p>
+    <p>050-1119-3282（作業中や外出のためお電話に出られないことが多くなっております。お急ぎのご用件も含め、メールにてご連絡ください。）</p>
     <p className="py-1 fw-bold">販売価格</p>
     <p>各商品ページに記載の金額（税込）</p>
     <p className="py-1 fw-bold">送料</p>

@@ -71,7 +71,7 @@ export default function Contact(){
 
         3日以内に返信できるよう努めて参ります。</p>
 
-        <p>直接メールでのご連絡を希望される場合は、mushi@furezuni.com　までお気軽にお問い合わせいただけます。</p>
+        <p>直接メールでのご連絡を希望される場合は、info@furezuni.com　までお気軽にお問い合わせいただけます。</p>
         <p>またこちらのページもご参照ください。</p>
         <Row className="py-5">
         <Col className="d-flex align-items-center justify-content-center">
