@@ -17,7 +17,7 @@ export default function Blog(){
           return response.data
         }
     })
-    console.log('blog data',data)
+    
     return <>
         <Layout>
             <h1>ブログページは準備中です。</h1>

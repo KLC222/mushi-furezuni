@@ -41,7 +41,7 @@ export function CartProvider(props: { children: React.ReactNode }){
       });
   
     function setProduct(newProduct: ProductData){
-        console.log("setProduct working", newProduct)
+        // console.log("setProduct working", newProduct)
         setCart(newProduct)
     }
     function removeProduct(){

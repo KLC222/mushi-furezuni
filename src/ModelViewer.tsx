@@ -9,7 +9,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 function Loader() {
   const { progress } = useProgress()
-  console.log(progress)
+  // console.log(progress)
   return <Html center>{progress} % loaded</Html>
 }
 

@@ -80,7 +80,7 @@ const CheckoutForm = () => {
 
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
-    console.log("submit")
+    // console.log("submit")
     e.preventDefault();
 
     setIsLoading(true);
@@ -94,7 +94,7 @@ const CheckoutForm = () => {
     }
 
     const confirmResult = await checkout.confirm();
-    console.log("confirm result", confirmResult)
+    // console.log("confirm result", confirmResult)
 
     // This point will only be reached if there is an immediate error when
     // confirming the payment. Otherwise, your customer will be redirected to

@@ -105,7 +105,7 @@ export default function PrivacyPolicy(){
     </p>
     <p>当社の個人情報の取扱いに関するご質問やご不明点、苦情、その他のお問い合わせは、下記の窓口までお願いいたします。</p>
     <p>社名：アステナル</p>
-    <p>Eメールアドレス：</p>
+    <p>Eメールアドレス： info@furezuni.com</p>
     <p className="pb-5">2025年6月3日改定</p>
 
   
