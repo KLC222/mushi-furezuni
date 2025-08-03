@@ -13,7 +13,6 @@ const RECAPTCHA_KEY = import.meta.env.VITE_RECAPCHA_SITE_KEY
 export default function Contact(){
   
 
-  // console.log('recaptcha key', RECAPTCHA_KEY)
   const recaptcha = useRef(null);
   const [token, setToken] = useState<string | null>(null);
   
@@ -45,15 +44,12 @@ export default function Contact(){
 
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
     e.preventDefault();
-    // console.log(e, formData)
     if(token){
       //currentTarget for the whole form 
       emailjs.send(SERVICE_ID, TEMPLATE_ID, {...formData, 'g-recaptcha-response': token}, PUBLIC_KEY)
       .then((result) => {
-        // console.log(result.text);
         alert("お問い合わせありがとうございます。内容を確認後、 3日以内に返信できるよう努めて参ります。")
       },(error)=>{
-        // console.log(error.text);
         alert('メッセージの送信に失敗しました。')
       });
       e.currentTarget.reset()

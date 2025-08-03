@@ -45,7 +45,7 @@ const items = data.map(product=> {
 
 
 function setCart(product: ProductData){
-  //console.log("productData", product)
+ 
   if (!product) {
     alert("製品が選択されていません") // "Product not selected"
     return;
@@ -89,7 +89,6 @@ function setCart(product: ProductData){
                   // if (found) {
                   //    setPrice(found.price)
                   // }
-                  //console.log("selectedProduct changed", selectedProduct)
                 }}>
                     <option disabled>色を選択</option>
                     {items}

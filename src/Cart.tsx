@@ -16,7 +16,6 @@ export default function Cart(){
     const [isShown, setIsShown] = useState(false);
     const context = useContext(CartContext);
     const {cart, setProduct, removeProduct} = context;
-    // console.log("cartContents", cart)
     
     const handleCheckoutClick = event => {
         event.preventDefault();

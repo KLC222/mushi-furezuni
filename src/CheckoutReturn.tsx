@@ -37,7 +37,6 @@ const CheckoutReturn = () => {
           }
     })
 
-    // console.log('session data', data)
     // setStatus(data.status);
     // setCustomerEmail(data.customer_email);
 
