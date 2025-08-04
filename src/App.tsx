@@ -26,8 +26,8 @@ export default function App(){
         <CartProvider>
         <BrowserRouter>
             <Routes>
-                {/* <Route path='/' element={<Construction />} /> */}
-                <Route path='/' element={<Home/>}/>
+                <Route path='/' element={<Construction />} />
+                <Route path='/home' element={<Home/>}/>
                 <Route path='/products' element={<Products />}>
                     <Route path='' element={<ProductDetails />}/>
                     <Route path="dimensions" element={<ProductDimensions/>}/>
