@@ -1,10 +1,10 @@
 import {useContext, useState, Suspense} from 'react'
+import type { MouseEventHandler } from 'react';
 import { CartContext } from './CartContext.tsx'
 import Container from 'react-bootstrap/Container';
 import NavTop from './NavTop.tsx';
 import Footer from './Footer.tsx';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import CloseButton from 'react-bootstrap/CloseButton';
 import { Link } from 'react-router';
@@ -12,12 +12,13 @@ import { Button } from 'react-bootstrap'
 import Checkout from './Checkout.tsx';
 
 
+
 export default function Cart(){
     const [isShown, setIsShown] = useState(false);
     const context = useContext(CartContext);
-    const {cart, setProduct, removeProduct} = context;
+    const {cart, removeProduct} = context;
     
-    const handleCheckoutClick = event => {
+    const handleCheckoutClick: MouseEventHandler<HTMLButtonElement> = (event) => {
         event.preventDefault();
         setIsShown(current=> !current);
     }
@@ -28,7 +29,7 @@ export default function Cart(){
         <Container className="center-product">
         <h1>*ページ制作中にて購入いただけません。</h1>
             {cart && <>
-            <h2 className="pt-5" style={{ textAlign: 'center' }}>ご注文内容</h2><Table className='my-5' bordered>
+            <h2 className="pt-5" style={{ textAlign: 'center' }}>ご注文内容</h2><Table responsive className='my-5' bordered>
                 <thead>
                     <tr>
                     <th></th>
@@ -40,7 +41,7 @@ export default function Cart(){
                 </thead>
                 <tbody>
                     <tr>
-                    {/* <td>{cart && <CloseButton onClick={removeProduct}/>}</td> */}
+                    <td>{cart && <CloseButton onClick={removeProduct}/>}</td>
                     <td>{cart?.product_name} {cart?.color}</td>
                     <td>
                         <div className="imgBox">
