@@ -40,7 +40,7 @@ export default function Cart(){
                 </thead>
                 <tbody>
                     <tr>
-                    <td>{cart && <CloseButton onClick={removeProduct}/>}</td>
+                    {/* <td>{cart && <CloseButton onClick={removeProduct}/>}</td> */}
                     <td>{cart?.product_name} {cart?.color}</td>
                     <td>
                         <div className="imgBox">
