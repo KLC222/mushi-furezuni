@@ -13,7 +13,7 @@ export default function NavTop() {
   return (
     <Navbar expand="lg" sticky="top" className="navbar navbar-effects nav-text" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand as={NavLink} to="/"><img src={logo} alt="logo" height={80}/></Navbar.Brand>
+        <Navbar.Brand as={NavLink} to="/"><img src={logo} alt="logo" height={90}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto d-flex flex-grow-1">

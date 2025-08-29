@@ -77,7 +77,7 @@ function setCart(product: ProductData){
             <Col className="pt-4">
              
                 {/* label for form */}
-                <Form.Label className="mt-4">色を選択してください</Form.Label>
+                <Form.Label className="mt-4">*色を選択してください</Form.Label>
                 {/* select form */}
                 <Form.Select onChange={event => {
                   
@@ -95,6 +95,7 @@ function setCart(product: ProductData){
                 </Form.Select>
                 <h5 className="mt-4">価格： {selectedProduct && price?.toString() || selectedProductData.price}円</h5> 
                 <Button className="mt-4 btn-custom-primary" onClick={()=>setCart(selectedProductData)}>カートに入れる</Button>
+                {/* <p  style={{color: "red"}}>大変申し訳ございません。只今品切れ中です。</p> */}
                 <p className="mt-4">*この製品は<strong>ハンドメイド</strong>です。同一の製品の中にも多少の違いがある場合があります。詳しくは以下の注文・発送に関してをご覧ください。</p>
                 <p className="mt-4">*発送にかかる日数は以下の注文・発送に関してを参照ください。</p>
                 <p className="mt-4">*受注制作のため、一品ずつの購入をよろしくお願いいたします。</p>

@@ -32,7 +32,7 @@ export default function Cart(){
             <h2 className="pt-5" style={{ textAlign: 'center' }}>ご注文内容</h2><Table responsive className='my-5' bordered>
                 <thead>
                     <tr>
-                    <th></th>
+                    <th>削除</th>
                     <th>注文詳細</th>
                     <th></th>
                     <th>個数</th>

@@ -45,6 +45,12 @@ $navbar-light-color: #fff;
 }
 
 //Footer
+@media (max-width: 991px){
+  .footer-logo {
+    display: none;
+  }
+}
+
 
 .footer a{
     color: rgb(214, 244, 227);
