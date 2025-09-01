@@ -97,6 +97,29 @@ export default function Home() {
                 </video>
           </Col>
           </Row>
+          <Row className="g-3 px-3 py-2 mb-5 shine_review text-center">
+         
+          
+              <Col xs='12' lg='4'>
+              <div className="review"><p>簡単に虫を捕まえれるのでとても使いやすいです。また、虫を潰したりしないで逃がすことができるのでとてもいい商品を購入できました。 ありがとうございました。</p>
+              <p>
+                -minneレビューより</p></div>
+              
+              </Col>
+              <Col xs='12' lg='4'>
+              <div className="review"><p>とても使いやすいです。わりと小さな虫も捕獲できました。これがあれば安心です！大きなサイズもあれば購入したいです。</p><p>-minneレビューより</p></div>
+              
+              </Col>
+              <Col xs='12' lg='4'>
+              <div className="review"><p>とても丁寧な作りで使いやすそうです。 このサイズは小さな虫にピッタリです。購入して良かったです。 もう少し大きめで持ち手部分が出来るだけ長い物（虫からなるべく遠く）も発売していただきたいです。</p><p>-minneレビューより</p></div>
+              
+              </Col>
+       
+          
+            <div className="text-center pt-3 pb-3">
+            <a href="https://minne.com/@earthtenaru/reviews" target="blank">Minneでレビューをもっと見る</a>
+            </div>
+          </Row>
     </Container>
     <Footer />
     </>

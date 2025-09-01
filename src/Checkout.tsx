@@ -146,7 +146,7 @@ const Checkout = () => {
       queryKey: ['checkout', cart?.stripe_price_id],
       queryFn: async ()=> {
         const response = await supabase.functions.invoke('create-checkout-session', {
-          body: { priceId: cart?.stripe_price_id },
+          body: { priceId: cart?.stripe_price_id, customerKey: localStorage.getItem('customerKey') ?? undefined },
         })
         if (response.error) {
           throw response.error

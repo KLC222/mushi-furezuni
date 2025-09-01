@@ -108,7 +108,45 @@ body #root {
   .nav-text {
     font-size: 1.4em;
   }
-  //Home
+  // https://stackoverflow.com/questions/76316492/custom-circle-cursor-with-hover-state-where-the-circle-is-filled-css-html-javasc
+  .container canvas {
+    cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23FF8C00" width="25px" height="25px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
+  }
+  .shine_review {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), #cae4db6e);
+    
+    border-radius: 2rem;
+    overflow: hidden; /* Ensure the shine effect doesn't overflow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    color: black;
+  }
+
+.shine_review::after {
+    
+    content: '';
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    // transform: rotate(45deg);
+    animation: shine 3s infinite linear;
+}
+  .review {
+    background-color: #fdfce4;
+    border-radius: 2em;
+    padding-top: 1em;
+    padding: 1em;
+    color: rgb(0, 96, 38);
+   
+  }
   .padding-top {
     padding-top: 2em;
   }
