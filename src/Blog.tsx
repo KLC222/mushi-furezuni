@@ -1,13 +1,12 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Container } from "react-bootstrap";
-import React, { useState } from 'react';
+import { useState } from 'react';
 import NavTop from "./NavTop";
 import Footer from "./Footer";
 
 export default function Blog() {
   const [showFullContentList, setShowFullContentList] = useState([0]);
-  const [blogNumber, setBlogNumber] = useState(0);
 
   const showContents = (content: number) => {
     // setBlogNumber(content);
@@ -140,37 +139,7 @@ export default function Blog() {
           {/* card 3 end */}
 
 
-          {/* card 4 */}
-          <Card className='mt-5'>
-            <Card.Header>2022年03月17日公開 | 2022年03月19日更新</Card.Header>
-            <Card.Body>
-              <Card.Title><a href="https://minne.com/@earthtenaru/letters/52248" target='blank'>殺虫した虫の処理方法
-              </a></Card.Title>
-              <Card.Text>
-                ゴキブリ、ムカデ、蜘蛛、ダンゴ虫等々の虫に殺虫剤を噴射した時、その死骸をどのように捕まえているでしょうか。
-
-                {showFullContentList.includes(4) && (<>
-                  <br /><br />別に手でつまんでも全然平気で問題ないです…という方は本当にそれこそ問題はないと思いますが…
-
-                  中には虫の死骸でも見たくないけど、仕方がないで…ティッシュペーパーで新聞で、牛乳パックを切って…等々で捕まえて処分している。
-
-                  という方々も勿論いらっしゃいます。
-
-                  <br /><br />その時に役立つものがこの<a href='https://furezuni.com/products'>虫をキャッチする虫とり器(虫フレズニー)</a>となります。
-
-                  子供でも簡単に扱うことができるので、この製品を各部屋に設置しておけば、生きてある虫でも、殺虫剤を使って死んだ虫でも簡単に捕獲処分することが可能となります。
-                </>
-                )
-                }
-
-
-              </Card.Text>
-              {!showFullContentList.includes(4) && (<Button className='custom-blog my-3' onClick={() => showContents(4)}>続きを読む</Button>)}
-              {showFullContentList.includes(4) && (<Button className='custom-blog my-3' onClick={() => hideContents(4)}>閉じる</Button>)}
-            </Card.Body>
-          </Card>
-
-          {/* card 4 end */}
+          
         </div>
       </Container>
     </div>
