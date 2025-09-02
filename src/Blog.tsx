@@ -31,6 +31,8 @@ export default function Blog() {
         <div className="blog_board">
           <h1 className='text-center py-3 blog-contents'>ブログ </h1>
           <p>タイトルをクリックすると<a href="https://minne.com/@earthtenaru/letters" target='blank'>Minneのレター（ブログ）のページ</a>が開きます。</p>
+
+          {/* card 1 */}
           <Card>
             <Card.Header>2022年11月21日公開</Card.Header>
             <Card.Body>
@@ -59,8 +61,9 @@ export default function Blog() {
 
             </Card.Body>
           </Card>
+          {/* card 1 end */}
 
-
+          {/* card 2 */}
           <Card className='mt-5'>
             <Card.Header>2022年03月17日公開</Card.Header>
             <Card.Body>
@@ -102,7 +105,10 @@ export default function Blog() {
               {showFullContentList.includes(2) && (<Button className='custom-blog my-3' onClick={() => hideContents(2)}>閉じる</Button>)}
             </Card.Body>
           </Card>
+          {/* card 2 end */}
 
+
+          {/* card 3 */}
           <Card className='mt-5'>
             <Card.Header>2022年03月17日公開 | 2022年03月19日更新</Card.Header>
             <Card.Body>
@@ -131,7 +137,7 @@ export default function Blog() {
               {showFullContentList.includes(3) && (<Button className='custom-blog my-3' onClick={() => hideContents(3)}>閉じる</Button>)}
             </Card.Body>
           </Card>
-
+          {/* card 3 end */}
 
 
           {/* card 4 */}
@@ -143,7 +149,7 @@ export default function Blog() {
               <Card.Text>
                 ゴキブリ、ムカデ、蜘蛛、ダンゴ虫等々の虫に殺虫剤を噴射した時、その死骸をどのように捕まえているでしょうか。
 
-                {showFullContentList.includes(3) && (<>
+                {showFullContentList.includes(4) && (<>
                   <br /><br />別に手でつまんでも全然平気で問題ないです…という方は本当にそれこそ問題はないと思いますが…
 
                   中には虫の死骸でも見たくないけど、仕方がないで…ティッシュペーパーで新聞で、牛乳パックを切って…等々で捕まえて処分している。
@@ -159,8 +165,8 @@ export default function Blog() {
 
 
               </Card.Text>
-              {!showFullContentList.includes(3) && (<Button className='custom-blog my-3' onClick={() => showContents(3)}>続きを読む</Button>)}
-              {showFullContentList.includes(3) && (<Button className='custom-blog my-3' onClick={() => hideContents(3)}>閉じる</Button>)}
+              {!showFullContentList.includes(4) && (<Button className='custom-blog my-3' onClick={() => showContents(4)}>続きを読む</Button>)}
+              {showFullContentList.includes(4) && (<Button className='custom-blog my-3' onClick={() => hideContents(4)}>閉じる</Button>)}
             </Card.Body>
           </Card>
 
