@@ -98,7 +98,7 @@ export default function Home() {
           </Col>
           </Row>
           <Row className="g-3 px-3 py-2 mb-5 shine_review text-center">
-         
+              <h4 className="pb-2">購入されたお客様の声</h4>
           
               <Col xs='12' lg='4'>
               <div className="review"><p>簡単に虫を捕まえれるのでとても使いやすいです。また、虫を潰したりしないで逃がすことができるのでとてもいい商品を購入できました。 ありがとうございました。</p>
