@@ -72,6 +72,7 @@ const EmailInput = ({ email, setEmail, error, setError }:EmailInputProps) => {
 
 const CheckoutForm = () => {
   const checkout = useCheckout();
+  console.log('Stripe checkout', checkout)
 
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState<string | null>(null);
