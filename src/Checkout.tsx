@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { type Appearance, loadStripe} from '@stripe/stripe-js';
 import {
   AddressElement,
@@ -72,12 +72,12 @@ const EmailInput = ({ email, setEmail, error, setError }:EmailInputProps) => {
 
 const CheckoutForm = () => {
   const checkout = useCheckout();
-  console.log('Stripe checkout', checkout)
 
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [phoneNumber, setPhoneNumber] = React.useState('');
 
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
@@ -107,6 +107,14 @@ const CheckoutForm = () => {
     setIsLoading(false);
   };
 
+  // handle phone number
+  const handleBlur = () => {
+    checkout.updatePhoneNumber(phoneNumber);
+  };
+  const handleChange:React.ChangeEventHandler<HTMLInputElement>  = (e) => {
+    setPhoneNumber(e.target.value);
+  };
+
   return (
     <Container>
     <form onSubmit={handleSubmit}>
@@ -120,6 +128,14 @@ const CheckoutForm = () => {
       <AddressElement options={{mode: 'billing'}} />
       <h4>配送先住所</h4>
       <AddressElement options={{mode: 'shipping'}} />
+      <h4>配送用電話番号</h4>
+      <input
+        type="text"
+        value={phoneNumber}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        className="phone-input mb-5"
+      />
       <h4>お支払い</h4>
       <PaymentElement id="payment-element" />
       {/* Show any error or success messages */}

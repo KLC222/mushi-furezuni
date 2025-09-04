@@ -3,11 +3,11 @@ import NavTop from "./NavTop"
 import { Container, Row, Col } from "react-bootstrap"
 import { Form } from "react-bootstrap";
 import Nav from 'react-bootstrap/Nav';
-import { NavLink, Outlet, useParams, useNavigate, Link } from "react-router";
+import { NavLink, Outlet, useNavigate, } from "react-router";
 import Footer from "./Footer";
 import { supabase } from "./supabase";
 import ProductsCarousel from './ProductsCarousel';
-import { ReactEventHandler, useState } from "react";
+import { useState } from "react";
 import {Button} from "react-bootstrap";
 import { type ProductData, useCartContext } from './CartContext'
 
