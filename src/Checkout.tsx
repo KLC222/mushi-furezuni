@@ -126,15 +126,16 @@ const CheckoutForm = () => {
       />
        <h4>請求先住所</h4>
       <AddressElement options={{mode: 'billing'}} />
-      <h4>配送先住所</h4>
+      <h4 className='pt-4'>配送先住所</h4>
       <AddressElement options={{mode: 'shipping'}} />
-      <h4>配送用電話番号</h4>
+      <h4 className='pt-4'>配送用電話番号（半角、ハイフンなし）（例）0312345678</h4>
       <input
         type="text"
         value={phoneNumber}
         onChange={handleChange}
         onBlur={handleBlur}
         className="phone-input mb-5"
+      
       />
       <h4>お支払い</h4>
       <PaymentElement id="payment-element" />
