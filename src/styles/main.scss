@@ -27,8 +27,11 @@ $position-values: (
 .navbar-brand{
     width: 15%;
 }
-.navbar-effects .nav-link:hover {
+
+.navbar-effects .nav-link {
   position: relative;
+}
+.navbar-effects .nav-link:hover {
   color: #ffdf6c;
 }
 
@@ -46,7 +49,7 @@ $position-values: (
   transition: width 0.3s ease, left 0.3s ease;
 }
 .navbar-effects .nav-link:hover::after {
-  width: 80%;
+  width: 90%;
   left: 0;
 }
 
@@ -354,6 +357,6 @@ body #root {
 }
 .about_board {
   background-color: white;
-  opacity: 70%;
+  opacity: 80%;
   padding: 3em;
 }
