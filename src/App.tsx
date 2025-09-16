@@ -17,6 +17,7 @@ import CheckoutReturn from './CheckoutReturn.tsx';
 import Blog from './Blog.tsx';
 import ContactSuccess from './ContactSuccess.tsx';
 import Construction from './Construction.tsx';
+import Warning from './Warning.tsx';
 
 
 export default function App(){
@@ -31,7 +32,8 @@ export default function App(){
                 <Route path='/products' element={<Products />}>
                     <Route path='' element={<ProductDetails />}/>
                     <Route path="dimensions" element={<ProductDimensions/>}/>
-          <Route path="shipping" element={<ProductShipping/>}/>
+                    <Route path="shipping" element={<ProductShipping/>}/>
+                    <Route path='warning' element={<Warning />}/>
                 </Route>
                 <Route path='/about' element={<About />}/>
                 <Route path='/contact' element={<Contact />}/>

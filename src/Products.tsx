@@ -116,6 +116,11 @@ function setCart(product: ProductData){
       注文・発送に関して
     </Nav.Link>
   </Nav.Item>
+  <Nav.Item>
+    <Nav.Link as={NavLink} to='warning'>
+      正規サイトに関して
+    </Nav.Link>
+  </Nav.Item>
 </Nav>
 {/* display each subpages under tabs */}
 <Outlet />
