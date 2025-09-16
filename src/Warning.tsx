@@ -18,6 +18,7 @@ export default function Warning() {
                 <a href='https://earthtenaru.shop-pro.jp/'>https://earthtenaru.shop-pro.jp/</a>
                 </li>
             </ul>
+            <p className="py-1 fw-bold">上記のサイト以外は当社とは全く関係のないサイトでありますので、そのサイトで購入した場合、当社では販売の責任を負いかねます。</p>
             <br />
             <h5>お問い合わせ</h5>
             <p>正規サイトに関する疑問や不安がある場合は、以下の連絡先までお問い合わせください。</p>
