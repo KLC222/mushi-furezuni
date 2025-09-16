@@ -32,6 +32,45 @@ export default function Blog() {
           <p>タイトルをクリックすると<a href="https://minne.com/@earthtenaru/letters" target='blank'>Minneのレター（ブログ）のページ</a>が開きます。</p>
 
           {/* card 1 */}
+          <Card className='mt-5'>
+            <Card.Header>2025年09月16日公開</Card.Header>
+            <Card.Body>
+              <Card.Title><a href="https://earthtenaru.shop-pro.jp/?mode=f10" target='blank'>虫フレズニーの正規サイト（リンクはカラーミーショップの記事です）
+              </a></Card.Title>
+              <Card.Text>
+              ＜！注意＞虫フレズニーを販売している当社のサイト以外で、販売しているサイトが以前数件発覚いたしました。
+              <br /><br />
+                  そのようなサイトは当社とは全く関係のないサイトでありますので、そのサイトで購入した場合、当社では販売の責任を負いかねます。どうぞこの記事にてご購入先のご確認をいただけますようお願いいたします。
+                
+                  
+
+                {showFullContentList.includes(3) && (<>
+                  <br /><br />
+                  本サイト以外でご購入を希望される場合は以下のいずれかのサイトであるかをご確認を頂きたく存じます。
+                  <br /><br />
+                  ハンドメイドショップのミンネ<br />
+                  <a href="https://minne.com/@earthtenaru">https://minne.com/@earthtenaru</a>
+                  <br /><br />
+                  カラーミーショップ<br />
+                  <a href='https://earthtenaru.shop-pro.jp/'>https://earthtenaru.shop-pro.jp/</a>
+                  <br /><br />
+                  何卒よろしくお願い申し上げます。
+                  
+
+                </>
+                )
+                }
+
+
+              </Card.Text>
+              {!showFullContentList.includes(3) && (<Button className='custom-blog my-3' onClick={() => showContents(3)}>続きを読む</Button>)}
+              {showFullContentList.includes(3) && (<Button className='custom-blog my-3' onClick={() => hideContents(3)}>閉じる</Button>)}
+            </Card.Body>
+          </Card>
+          {/* card 1 end */}
+
+          {/* card 1 */}
+
           <Card>
             <Card.Header>2022年11月21日公開</Card.Header>
             <Card.Body>
@@ -137,8 +176,8 @@ export default function Blog() {
             </Card.Body>
           </Card>
           {/* card 3 end */}
-
-
+          
+          
           
         </div>
       </Container>
