@@ -69,7 +69,7 @@ export default function Blog() {
           </Card>
           {/* card 1 end */}
 
-          {/* card 1 */}
+          {/* card 2 */}
 
           <Card>
             <Card.Header>2022年11月21日公開</Card.Header>
@@ -99,9 +99,9 @@ export default function Blog() {
 
             </Card.Body>
           </Card>
-          {/* card 1 end */}
+          {/* card 2 end */}
 
-          {/* card 2 */}
+          {/* card 3 */}
           <Card className='mt-5'>
             <Card.Header>2022年03月17日公開</Card.Header>
             <Card.Body>
@@ -143,10 +143,10 @@ export default function Blog() {
               {showFullContentList.includes(2) && (<Button className='custom-blog my-3' onClick={() => hideContents(2)}>閉じる</Button>)}
             </Card.Body>
           </Card>
-          {/* card 2 end */}
+          {/* card 3 end */}
 
 
-          {/* card 3 */}
+          {/* card 4 */}
           <Card className='mt-5'>
             <Card.Header>2022年03月17日公開 | 2022年03月19日更新</Card.Header>
             <Card.Body>
@@ -175,7 +175,7 @@ export default function Blog() {
               {showFullContentList.includes(3) && (<Button className='custom-blog my-3' onClick={() => hideContents(3)}>閉じる</Button>)}
             </Card.Body>
           </Card>
-          {/* card 3 end */}
+          {/* card 4 end */}
           
           
           
