@@ -2,6 +2,16 @@ $primary: #31A87C;
 $secondary: #3BCA96;
 $navbar-light-color: #fff;
 
+$position-values: (
+  0: 0,
+  5: 5%,
+  10: 10%,
+  20: 20%,
+  25: 25%,
+  30: 30%,
+  50: 50%,
+  100: 100%
+);
 
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
@@ -328,5 +338,22 @@ body #root {
 .blog_board {
   background-color: white;
   opacity: 85%;
+  padding: 3em;
+}
+
+// about page
+.about_background {
+  background-image: url(/assets/images/shine.jpg);
+  padding-top: 3em;
+  padding-bottom: 3em;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.about_board {
+  background-color: white;
+  opacity: 70%;
   padding: 3em;
 }
