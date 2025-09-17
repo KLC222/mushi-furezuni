@@ -21,6 +21,7 @@ $position-values: (
 //Nav
 .navbar {
     color: white;
+    
     background-color: #34A37A;
     
 }
@@ -30,6 +31,7 @@ $position-values: (
 
 .navbar-effects .nav-link {
   position: relative;
+  
 }
 .navbar-effects .nav-link:hover {
   color: #ffdf6c;
@@ -165,9 +167,9 @@ body #root {
   }
   .expandable-col{
     
-    border-radius: 3em;
+    border-radius: 2em;
     position: relative;
-    z-index: 1;
+    
     
     
   }
@@ -182,21 +184,35 @@ body #root {
     padding-top: 10px;
     transition: transform 0.6s ease-out, opacity 0.6s ease-out;
     color: black;
+    margin: 0 10%;
+    
   }
   .expandable-col:hover {
     
     .expandable-details{
         opacity: 1;
+       
+    }
+
+    .animated-col {
+      background: linear-gradient(180deg, #34A37A 0, #FFF 130%);
+      padding-top: 1em;
+
+      padding-bottom: 1em;
+      color: white;
+
     }
   }
+
   .animated-col {
     background: linear-gradient(180deg, #34A37A 0, #FFF 130%);
     padding-top: 1em;
-    border-radius: 3em;
+    border-radius: 2em;
     padding-bottom: 1em;
     color: white;
-    margin-bottom: 3rem;
+   
   }
+
   .expandable-col:hover {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transform: scale(1.02);

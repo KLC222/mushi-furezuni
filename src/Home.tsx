@@ -28,9 +28,9 @@ export default function Home() {
             </div>
           </Col>
         </Row>
-        <Row className="gap-5  justify-content-center mb-5"> {/* Adjust gap as needed */}
+        <Row className="gap-4 gap-sm-5 justify-content-center mb-5"> {/* Adjust gap as needed */}
           <Col
-            xs={12}
+            xs={11}
             sm={3}
             className="text-center animated-col expandable-col"
           >
@@ -40,7 +40,7 @@ export default function Home() {
             </div>
           </Col>
           <Col
-            xs={12}
+            xs={11}
             sm={3}
             className="text-center animated-col expandable-col"
           >
@@ -50,7 +50,7 @@ export default function Home() {
             </div>
           </Col>
           <Col
-            xs={12}
+            xs={11}
             sm={3}
             className="text-center animated-col expandable-col"
           >
