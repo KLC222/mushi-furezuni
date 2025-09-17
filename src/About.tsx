@@ -3,7 +3,9 @@ import { Container } from "react-bootstrap";
 import Footer from './Footer.tsx';
 import {Button} from "react-bootstrap";
 import { Link } from 'react-router'
-import earth from '/assets/images/earth.gif'
+import earth from '/assets/images/earth.gif';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export default function About(){
     return <>
@@ -27,11 +29,15 @@ export default function About(){
 <br /><br />そこで私たちは虫フレズニーを開発いたしました。この商品を各家庭に備えておけば、虫が急に出た場合でも簡単に、人に、虫に、環境に安全に捕獲処分することが可能となるのです。虫フレズニーで虫を室外に出すことにより、子供たちには昆虫をやさしく外に戻す経験をし、自然との共存に関する貴重な教訓を提供することができます。
 <br /><br />アステナルは単なる害虫駆除を超えた製品の良さを、より多くの方に体験していただけることを目指しております。虫フレズニーを使用することで、単に昆虫を処分するだけでなく、自然環境保全に対する意識向上へと繋がっていけるものと思っております。</p>
 
-    <div className="d-flex justify-content-center">
-        {/* https://pixabay.com/gifs/earth-earth-day-planet-nature-19419/ */}
-    <img src={earth} alt="logo" className='position-relative end-10'/>
+    <Row className="d-flex justify-content-center">
+  
+    <Col xs={12} md={6} className="text-center">   {/* https://pixabay.com/gifs/earth-earth-day-planet-nature-19419/ */}
+        <img src={earth} alt="logo"/>
+    </Col> 
+    <Col  xs={12} md={6} className="text-center text-md-start">
         <Link to='/products'><Button className="my-5 btn-custom-primary position-relative top-25">虫フレズニーを購入</Button></Link> 
-    </div>
+    </Col>
+    </Row>
     </div>
     </Container>
     </div>
