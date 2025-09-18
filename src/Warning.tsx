@@ -17,6 +17,9 @@ export default function Warning() {
                 <li>カラーミーショップ
                 <a href='https://earthtenaru.shop-pro.jp/'>https://earthtenaru.shop-pro.jp/</a>
                 </li>
+                <li>BASEショップ
+                <a href='https://earthtenaru.base.shop/'>https://earthtenaru.base.shop/</a>
+                </li>
             </ul>
             <p className="py-1 fw-bold">上記のサイト以外は当社とは全く関係のないサイトでありますので、そのサイトで購入した場合、当社では販売の責任を負いかねます。</p>
             <br />

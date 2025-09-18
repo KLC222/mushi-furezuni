@@ -58,6 +58,9 @@ export default function Blog() {
                   カラーミーショップ<br />
                   <a href='https://earthtenaru.shop-pro.jp/'>https://earthtenaru.shop-pro.jp/</a>
                   <br /><br />
+                  BASEショップ<br />
+                  <a href='https://earthtenaru.base.shop/'>https://earthtenaru.base.shop/</a>
+                  <br /><br />
                   何卒よろしくお願い申し上げます。
                   
 
