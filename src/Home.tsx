@@ -92,7 +92,7 @@ export default function Home() {
           
           <Col sm={6} className="mb-3">  
               {/* render the video as embedded video*/}
-              <video width="100%" controls>
+              <video width="100%" controls controlsList='nodownload'>
                 <source src={videoFile}  type="video/mp4" />
                 </video>
           </Col>
